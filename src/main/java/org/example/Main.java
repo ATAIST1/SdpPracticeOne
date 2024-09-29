@@ -1,23 +1,22 @@
 package org.example;
 
-
-import org.example.TaskThree.Bird;
-import org.example.TaskThree.Penguin;
-import org.example.TaskThree.Flyable;
-import org.example.TaskThree.Sparrow;
-import org.example.TaskTwo.Circle;
-import org.example.TaskTwo.Rectangle;
-import org.example.TaskTwo.Shape;
+import org.example.TaskFour.Eatable;
+import org.example.TaskFour.HumanWorker;
+import org.example.TaskFour.RobotWorker;
+import org.example.TaskFour.Workable;
+import org.example.TaskFour.Worker;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Shape rectangle = new Rectangle(5, 3);
-        Shape circle = new Circle(4);
+        Workable humanWorker = new HumanWorker();
+        Workable robotWorker = new RobotWorker();
 
-        System.out.println("Rectangle area: " + rectangle.area());
-        System.out.println("Circle area: " + circle.area());
+        humanWorker.work();
+        ((Eatable) humanWorker).eat();
+
+        robotWorker.work();
 
     }
 }
