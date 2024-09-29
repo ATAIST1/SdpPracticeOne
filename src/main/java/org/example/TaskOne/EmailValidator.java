@@ -1,4 +1,4 @@
-package org.example;
+package org.example.TaskOne;
 
 public class EmailValidator {
     public boolean isValid(String email) {

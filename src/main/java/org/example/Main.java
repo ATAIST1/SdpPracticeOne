@@ -1,18 +1,20 @@
 package org.example;
 
 
+import org.example.TaskTwo.Circle;
+import org.example.TaskTwo.Rectangle;
+
+import org.example.TaskTwo.Shape;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        User user = new User("Alice", "aliceexample.com");
-        EmailValidator validator = new EmailValidator();
+        Shape rectangle = new Rectangle(5, 3);
+        Shape circle = new Circle(4);
 
-        if (validator.isValid(user.getEmail())) {
-            System.out.println(user.getName() + "'s email is valid.");
-        } else {
-            System.out.println(user.getName() + "'s email is invalid.");
-        }
+        System.out.println("Rectangle area: " + rectangle.area());
+        System.out.println("Circle area: " + circle.area());
+
 
     }
 }
